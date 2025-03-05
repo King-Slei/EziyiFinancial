@@ -18,7 +18,7 @@ function App() {
       <Routes>
         {/* Home Page */}
         <Route
-          path="/"
+          path="/EziyiFinancial"
           element={
             <>
               <Home />
