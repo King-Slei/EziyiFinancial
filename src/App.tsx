@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/sections/Home";
+import ChooseUs from "./components/units/ChooseUs";
+import ProfessionalServicesPage from "./components/sections/ProfessionalServicesPage";
+import ClientCenteredApproach from "./components/sections/ClientCenteredApproachPage";
+import Consultation from "./components/sections/Consultation";
+import Footer from "./components/sections/Footer";
+import AboutUsPage from "./components/sections/AboutUsPage"; // Import the About Us page
+import MortgageReferral from "./components/sections/services/MortgageReferral";
+import PersonalizedServices from "./components/sections/services/PersonalizedServices";
+import InvestmentSavings from "./components/sections/services/InvestmentSavings";
+import InsuranceProtection from "./components/sections/services/InsuranceProtection";
+import FinancialGuideCard from "./components/sections/Blogs";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Home Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <ChooseUs />
+              <ProfessionalServicesPage />
+              <ClientCenteredApproach />
+              <Consultation />
+              <Footer isHomePage={true} />
+            </>
+          }
+        />
+        
+        {/* About Us Page */}
+        <Route
+          path="/about"
+          element={
+            <>
+              <AboutUsPage />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/investment" element={<InvestmentSavings/>} />
+        <Route path="/savings" element={<InsuranceProtection />} />
+        <Route path="/personalized" element={<PersonalizedServices />} />
+        <Route path="/mortgage" element={<MortgageReferral />} />
+        <Route path="/tips" element={<FinancialGuideCard />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
