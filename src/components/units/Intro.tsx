@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from "react-typewriter-effect";
 import calculator from "../../assets/calculator.png";
 import overlay from "../../assets/overlay.png";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
     return (
@@ -21,9 +22,11 @@ const Intro = () => {
                         eraseDelay={3000}
                     />
                 </h2>
-                <button className="mt-10 bg-blue-700 text-white px-10 py-5 rounded text-2xl">
-                    Book Appointment
-                </button>
+                <Link to="/EziyiFinancial#consultation">
+                    <button className="mt-10 bg-blue-700 text-white px-10 py-5 rounded text-2xl">
+                        Book Appointment
+                    </button>
+                </Link>
             </div>
             <div className="relative flex justify-center mt-12 lg:mt-0 lg:max-w-lg">
                 <img src={overlay} alt="Background Overlay" className="absolute inset-0 w-full h-full object-cover" />
