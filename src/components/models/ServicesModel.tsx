@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../../components/sections/Footer";
 import PageHeaderModel from "./PageHeaderModel";
+import { Link } from "react-router-dom";
 
 type ServicesModelProps = {
   title: string;
@@ -39,17 +40,18 @@ const ServicesModel: React.FC<ServicesModelProps> = ({ title, image, content }) 
           <p className="mb-4">{content}</p>
           
           {/* Call to Action Button */}
-          <motion.button 
-            className="px-6 py-3 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Get Started
-          </motion.button>
+          <Link to="/EziyiFinancial#consultation">
+            <motion.button 
+              className="px-6 py-3 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Get Started
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
-      
       {/* Footer Section */}
       <Footer />
     </div>

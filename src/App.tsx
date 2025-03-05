@@ -1,9 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/sections/Home";
-import ChooseUs from "./components/units/ChooseUs";
-import ProfessionalServicesPage from "./components/sections/ProfessionalServicesPage";
-import ClientCenteredApproach from "./components/sections/ClientCenteredApproachPage";
-import Consultation from "./components/sections/Consultation";
 import Footer from "./components/sections/Footer";
 import AboutUsPage from "./components/sections/AboutUsPage"; // Import the About Us page
 import MortgageReferral from "./components/sections/services/MortgageReferral";
@@ -22,18 +18,13 @@ function App() {
           element={
             <>
               <Home />
-              <ChooseUs />
-              <ProfessionalServicesPage />
-              <ClientCenteredApproach />
-              <Consultation />
-              <Footer isHomePage={true} />
             </>
           }
         />
         
         {/* About Us Page */}
         <Route
-          path="/about"
+          path="/EziyiFinancial/about"
           element={
             <>
               <AboutUsPage />
@@ -41,11 +32,11 @@ function App() {
             </>
           }
         />
-        <Route path="/investment" element={<InvestmentSavings/>} />
-        <Route path="/savings" element={<InsuranceProtection />} />
-        <Route path="/personalized" element={<PersonalizedServices />} />
-        <Route path="/mortgage" element={<MortgageReferral />} />
-        <Route path="/tips" element={<FinancialGuideCard />} />
+        <Route path="/EziyiFinancial/investment" element={<InvestmentSavings/>} />
+        <Route path="/EziyiFinancial/savings" element={<InsuranceProtection />} />
+        <Route path="/EziyiFinancial/personalized" element={<PersonalizedServices />} />
+        <Route path="/EziyiFinancial/mortgage" element={<MortgageReferral />} />
+        <Route path="/EziyiFinancial/tips" element={<FinancialGuideCard />} />
       </Routes>
     </Router>
   );
