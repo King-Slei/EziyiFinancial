@@ -22,11 +22,15 @@ const Intro = () => {
                         eraseDelay={3000}
                     />
                 </h2>
-                <Link to="/EziyiFinancial#consultation">
+                <a 
+                        href="https://calendly.com/eziyifinancial" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                >
                     <button className="mt-10 bg-blue-700 text-white px-10 py-5 rounded text-2xl">
                         Book Appointment
                     </button>
-                </Link>
+                </a>
             </div>
             <div className="relative flex justify-center mt-12 lg:mt-0 lg:max-w-lg">
                 <img src={overlay} alt="Background Overlay" className="absolute inset-0 w-full h-full object-cover" />
