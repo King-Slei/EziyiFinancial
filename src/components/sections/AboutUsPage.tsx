@@ -1,7 +1,4 @@
-import React from "react";
-import Navbar from "../../components/units/NavBar";
 import profilePic from "../../assets/victor.png";
-import background from "../../assets/background.png";
 import { motion } from "framer-motion";
 import DifferentFromOthers from "./DifferentFromOthers";
 import PageHeaderModel from "../../components/models/PageHeaderModel";

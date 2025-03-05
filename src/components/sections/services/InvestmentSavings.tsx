@@ -1,4 +1,3 @@
-import React from "react";
 import ServicesModel from "../../../components/models/ServicesModel";
 import investmentImage from "../../../assets/investment.png";
 

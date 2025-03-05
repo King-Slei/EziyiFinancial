@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import growthIllustration from "../../assets/different.png";
 

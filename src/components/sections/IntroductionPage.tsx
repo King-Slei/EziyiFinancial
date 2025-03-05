@@ -1,4 +1,3 @@
-import React from "react";
 import brainstorm from "../../assets/brainstorm.png";
 import calculator from "../../assets/calculator.png";
 import overlay from "../../assets/overlay.png";
