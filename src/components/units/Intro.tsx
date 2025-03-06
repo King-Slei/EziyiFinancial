@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Typewriter from "react-typewriter-effect";
 import calculator from "../../assets/calculator.png";
 import overlay from "../../assets/overlay.png";
-import { Link } from "react-router-dom";
 
 const Intro = () => {
     return (
