@@ -40,7 +40,7 @@ const ServicesModel: React.FC<ServicesModelProps> = ({ title, image, content }) 
           <p className="mb-4">{content}</p>
           
           {/* Call to Action Button */}
-          <Link to="/EziyiFinancial#consultation">
+          <Link to="/#consultation">
             <motion.button 
               className="px-6 py-3 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
               initial={{ opacity: 0, y: 50 }}
