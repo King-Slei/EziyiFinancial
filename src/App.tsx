@@ -14,7 +14,7 @@ function App() {
       <Routes>
         {/* Home Page */}
         <Route
-          path="/EziyiFinancial"
+          path="/"
           element={
             <>
               <Home />
@@ -24,7 +24,7 @@ function App() {
         
         {/* About Us Page */}
         <Route
-          path="/EziyiFinancial/about"
+          path="/about"
           element={
             <>
               <AboutUsPage />
@@ -32,11 +32,11 @@ function App() {
             </>
           }
         />
-        <Route path="/EziyiFinancial/investment" element={<InvestmentSavings/>} />
-        <Route path="/EziyiFinancial/savings" element={<InsuranceProtection />} />
-        <Route path="/EziyiFinancial/personalized" element={<PersonalizedServices />} />
-        <Route path="/EziyiFinancial/mortgage" element={<MortgageReferral />} />
-        <Route path="/EziyiFinancial/tips" element={<FinancialGuideCard />} />
+        <Route path="/investment" element={<InvestmentSavings/>} />
+        <Route path="/savings" element={<InsuranceProtection />} />
+        <Route path="/personalized" element={<PersonalizedServices />} />
+        <Route path="/mortgage" element={<MortgageReferral />} />
+        <Route path="/tips" element={<FinancialGuideCard />} />
       </Routes>
     </Router>
   );

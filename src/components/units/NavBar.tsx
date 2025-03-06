@@ -76,8 +76,8 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-white p-6 space-y-4 text-center">
-                    <Link to="/EziyiFinancial" className="block text-gray-700 hover:text-blue-600">Home</Link>
-                    <Link to="/EziyiFinancial/about"className="block text-gray-700 hover:text-blue-600">About Us</Link>
+                    <Link to="/" className="block text-gray-700 hover:text-blue-600">Home</Link>
+                    <Link to="/about"className="block text-gray-700 hover:text-blue-600">About Us</Link>
                     <div className="relative">
                         <button 
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -87,10 +87,10 @@ const Navbar = () => {
                         </button>
                         {isDropdownOpen && (
                             <div className="bg-gray-100 mt-2 rounded-lg">
-                                <Link to="/EziyiFinancial/investment" className="block px-6 py-3 hover:bg-blue-100">Investment Protection</Link>
-                                <Link to="/EziyiFinancial/savings" className="block px-6 py-3 hover:bg-blue-100">Savings & Retirement</Link>
-                                <Link to="/EziyiFinancial/personalized" className="block px-6 py-3 hover:bg-blue-100">Personalized Services</Link>
-                                <Link to="/EziyiFinancial/mortgage" className="block px-6 py-3 hover:bg-blue-100">Mortgage Referral</Link>
+                                <Link to="/investment" className="block px-6 py-3 hover:bg-blue-100">Investment Protection</Link>
+                                <Link to="/savings" className="block px-6 py-3 hover:bg-blue-100">Savings & Retirement</Link>
+                                <Link to="/personalized" className="block px-6 py-3 hover:bg-blue-100">Personalized Services</Link>
+                                <Link to="/mortgage" className="block px-6 py-3 hover:bg-blue-100">Mortgage Referral</Link>
                             </div>
                         )}
                     </div>
