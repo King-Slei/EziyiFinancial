@@ -105,7 +105,11 @@ const Navbar = () => {
                     </div>
                     <Link to="/tips" className="block text-gray-700 hover:text-blue-600">Tips & Tricks</Link>
                     <button className="w-full border border-blue-700 text-blue-700 px-5 py-3 rounded hover:bg-blue-100">Contact Us</button>
-                    <button className="w-full bg-blue-700 text-white px-5 py-3 rounded">Book Appointment</button>
+                    <a 
+                        href="https://calendly.com/eziyifinancial" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    ><button className="w-full bg-blue-700 text-white px-5 py-3 rounded">Book Appointment</button></a>
                 </div>
             )}
         </nav>
