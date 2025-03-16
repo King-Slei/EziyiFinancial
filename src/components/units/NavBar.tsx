@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -21,11 +22,15 @@ const Navbar = () => {
     return (
         <nav className="bg-white shadow-md w-full">
             <div className="max-w-7xl mx-auto flex justify-between items-center p-6 lg:px-16">
+            <div className="flex items-center space-x-3">
+                <img src={logo} alt="Logo" className="h-8 w-8" />
                 <h1 className="text-4xl font-bold text-blue-900">Eziyi Financial</h1>
+            </div>
+
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8 text-lg">
-                    <Link to="" className="text-gray-700 hover:text-blue-600">Home</Link>
+                <Link to="/" className="text-gray-700 hover:text-blue-600">Home</Link>
                     <Link to="/about" className="text-gray-700 hover:text-blue-600">About Us</Link>
 
                     {/* Services Dropdown */}
@@ -76,26 +81,11 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-white p-6 space-y-4 text-center">
-                    <Link 
-  to="/" 
-  onClick={(e) => {
-    e.preventDefault();
-    window.location.href = "/";
-  }} 
-  className="block text-gray-700 hover:text-blue-600"
->
-  Home
-</Link>
-                    <Link 
-                        to="/" 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            window.location.href = "/";
-                        }} 
-                        className="block text-gray-700 hover:text-blue-600"
-                    >
-                        Home
-                    </Link>
+                    {/* <div className="flex items-center space-x-2">
+                        <img src={logo} alt="Logo" className="h-6 w-6" /> */}
+                        <Link to="https://eziyifinancial.com" className="block text-gray-700 hover:text-blue-600">Home</Link>
+                    {/* </div> */}
+
                     <Link to="/about"className="block text-gray-700 hover:text-blue-600">About Us</Link>
                     <div className="relative">
                         <button 

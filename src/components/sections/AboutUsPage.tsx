@@ -44,6 +44,11 @@ const AboutUsPage = () => {
           <p className="text-gray-700 mt-2 text-sm md:text-base leading-relaxed">
             With partnerships with over 20 financial institutions, Victor ensures clients receive the best options and tailored solutions.
           </p>
+          <a 
+            href="https://calendly.com/eziyifinancial" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
           <motion.button 
             className="mt-3 bg-blue-900 text-white px-5 py-2 rounded-lg hover:bg-blue-700"
             whileHover={{ scale: 1.05 }}
@@ -51,6 +56,7 @@ const AboutUsPage = () => {
           >
             Get Started
           </motion.button>
+          </a>
         </motion.div>
       </motion.div>
 
