@@ -7,7 +7,6 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-
     const handleMouseEnter = () => {
         if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
         setIsDropdownOpen(true);
@@ -22,16 +21,15 @@ const Navbar = () => {
     return (
         <nav className="bg-white shadow-md w-full">
             <div className="max-w-7xl mx-auto flex justify-between items-center p-6 lg:px-16">
-            <div className="flex items-center space-x-3">
-                <img src={logo} alt="Logo" className="h-8 w-8" />
-                <h1 className="text-4xl font-bold text-blue-900">Eziyi Financial</h1>
-            </div>
-
+                <div className="flex items-center space-x-3">
+                    <img src={logo} alt="Logo" className="h-8 w-8" />
+                    <h1 className="text-4xl font-bold text-blue-900">Eziyi Financial</h1>
+                </div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8 text-lg">
-                <Link to="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-                    <Link to="/about" className="text-gray-700 hover:text-blue-600">About Us</Link>
+                    <Link to="/" className="text-blue-900 font-bold hover:text-blue-600">Home</Link>
+                    <Link to="/about" className="text-blue-900 font-bold hover:text-blue-600">About Us</Link>
 
                     {/* Services Dropdown */}
                     <div 
@@ -39,35 +37,35 @@ const Navbar = () => {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <div className="text-gray-700 hover:text-blue-600">Services</div>
+                        <div className="text-blue-900 font-bold hover:text-blue-600 cursor-pointer">Services</div>
                         {isDropdownOpen && (
                             <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md z-10">
-                                <Link to="/investment" className="block px-6 py-3 hover:bg-blue-100">Investment Protection</Link>
-                                <Link to="/savings" className="block px-6 py-3 hover:bg-blue-100">Savings & Retirement</Link>
-                                <Link to="/personalized" className="block px-6 py-3 hover:bg-blue-100">Personalized Services</Link>
-                                <Link to="/mortgage" className="block px-6 py-3 hover:bg-blue-100">Mortgage Referral</Link>
+                                <Link to="/investment" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Investment Protection</Link>
+                                <Link to="/savings" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Savings & Retirement</Link>
+                                <Link to="/personalized" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Personalized Services</Link>
+                                <Link to="/mortgage" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Mortgage Referral</Link>
                             </div>
                         )}
                     </div>
 
-                    <Link to="/tips" className="text-gray-700 hover:text-blue-600">Tips & Tricks</Link>
+                    <Link to="/tips" className="text-blue-900 font-bold hover:text-blue-600">Tips & Tricks</Link>
                 </div>
 
                 {/* Buttons */}
                 <div className="hidden md:flex space-x-4">
-                <Link to="#consultation">
-                    <button className="w-full border border-blue-700 text-blue-700 px-5 py-3 rounded hover:bg-blue-100">
-                        Contact Us
-                    </button>
-                </Link>
+                    <Link to="#consultation">
+                        <button className="w-full border border-blue-900 text-blue-900 font-bold px-5 py-3 rounded hover:bg-blue-100">
+                            Contact Us
+                        </button>
+                    </Link>
 
                     <a 
                         href="https://calendly.com/eziyifinancial" 
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        <button className="bg-blue-700 text-white px-5 py-3 rounded">
-                        Book Appointment
+                        <button className="bg-blue-900 text-white font-bold px-5 py-3 rounded">
+                            Book Free Consultation
                         </button>
                     </a>
                 </div>
@@ -81,35 +79,41 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-white p-6 space-y-4 text-center">
-                    {/* <div className="flex items-center space-x-2">
-                        <img src={logo} alt="Logo" className="h-6 w-6" /> */}
-                        <Link to="https://eziyifinancial.com" className="block text-gray-700 hover:text-blue-600">Home</Link>
-                    {/* </div> */}
+                    <Link to="/" className="block text-blue-900 font-bold hover:text-blue-600">Home</Link>
+                    <Link to="/about" className="block text-blue-900 font-bold hover:text-blue-600">About Us</Link>
 
-                    <Link to="/about"className="block text-gray-700 hover:text-blue-600">About Us</Link>
                     <div className="relative">
                         <button 
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="block w-full text-gray-700 hover:text-blue-600"
+                            className="block w-full text-blue-900 font-bold hover:text-blue-600"
                         >
                             Services {isDropdownOpen ? "▲" : "▼"}
                         </button>
                         {isDropdownOpen && (
                             <div className="bg-gray-100 mt-2 rounded-lg">
-                                <Link to="/investment" className="block px-6 py-3 hover:bg-blue-100">Investment Protection</Link>
-                                <Link to="/savings" className="block px-6 py-3 hover:bg-blue-100">Savings & Retirement</Link>
-                                <Link to="/personalized" className="block px-6 py-3 hover:bg-blue-100">Personalized Services</Link>
-                                <Link to="/mortgage" className="block px-6 py-3 hover:bg-blue-100">Mortgage Referral</Link>
+                                <Link to="/investment" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Investment Protection</Link>
+                                <Link to="/savings" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Savings & Retirement</Link>
+                                <Link to="/personalized" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Personalized Services</Link>
+                                <Link to="/mortgage" className="block px-6 py-3 text-blue-900 font-bold hover:bg-blue-100">Mortgage Referral</Link>
                             </div>
                         )}
                     </div>
-                    <Link to="/tips" className="block text-gray-700 hover:text-blue-600">Tips & Tricks</Link>
-                    <button className="w-full border border-blue-700 text-blue-700 px-5 py-3 rounded hover:bg-blue-100">Contact Us</button>
+
+                    <Link to="/tips" className="block text-blue-900 font-bold hover:text-blue-600">Tips & Tricks</Link>
+
+                    <button className="w-full border border-blue-900 text-blue-900 font-bold px-5 py-3 rounded hover:bg-blue-100">
+                        Contact Us
+                    </button>
+
                     <a 
                         href="https://calendly.com/eziyifinancial" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                    ><button className="w-full bg-blue-700 text-white px-5 py-3 rounded">Book Appointment</button></a>
+                    >
+                        <button className="w-full bg-blue-900 text-white font-bold px-5 py-3 rounded">
+                            Book Free Consultation
+                        </button>
+                    </a>
                 </div>
             )}
         </nav>

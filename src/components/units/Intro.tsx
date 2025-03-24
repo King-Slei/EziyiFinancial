@@ -12,7 +12,7 @@ const Intro = () => {
             className="flex flex-col lg:flex-row items-center justify-between py-24 px-16 max-w-7xl mx-auto"
         >
             <div className="max-w-xl text-left">
-                <h2 className="text-6xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                     <Typewriter
                         text="Top-Notch Financial Advice & Solution For You!"
                         cursorColor="#2563EB"
@@ -27,7 +27,7 @@ const Intro = () => {
                         rel="noopener noreferrer"
                 >
                     <button className="mt-10 bg-blue-700 text-white px-10 py-5 rounded text-2xl">
-                        Book Appointment
+                        Book Free Consultation
                     </button>
                 </a>
             </div>
