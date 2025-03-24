@@ -70,6 +70,11 @@ const Navbar = () => {
                     </a>
                 </div>
 
+
+
+
+                
+
                 {/* Mobile Menu Button */}
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-gray-700">
                     {isMenuOpen ? "✖" : "☰"}
