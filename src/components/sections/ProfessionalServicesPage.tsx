@@ -15,6 +15,13 @@ const containerVariants = {
   },
 };
 
+const handleLinkClick = (event, to) => {
+  if (event.ctrlKey || event.metaKey) {
+    window.open(to, "_blank");
+    event.preventDefault();
+  }
+};
+
 const ProfessionalServicesPage = () => {
   return (
     <motion.section
@@ -78,7 +85,7 @@ const ProfessionalServicesPage = () => {
               <h3 className="text-2xl md:text-2xl font-bold">{service.title}</h3>
             </div>
             <p className="text-base md:text-base mb-4">{service.description}</p>
-            <Link to={service.to} className="text-white underline text-lg hover:text-gray-300">
+            <Link to={service.to} className="text-white underline text-lg hover:text-gray-300" onClick={(e) => handleLinkClick(e, service.to)}>
               Learn more →
             </Link>
           </motion.div>
