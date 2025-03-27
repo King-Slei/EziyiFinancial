@@ -15,7 +15,7 @@ const containerVariants = {
   },
 };
 
-const handleLinkClick = (event, to) => {
+const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, to: string) => {
   if (event.ctrlKey || event.metaKey) {
     window.open(to, "_blank");
     event.preventDefault();
