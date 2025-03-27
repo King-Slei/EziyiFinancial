@@ -7,6 +7,7 @@ import PersonalizedServices from "./components/sections/services/PersonalizedSer
 import InvestmentSavings from "./components/sections/services/InvestmentSavings";
 import InsuranceProtection from "./components/sections/services/InsuranceProtection";
 import FinancialGuideCard from "./components/sections/Blogs";
+import CoachingAndMentoring from "./components/sections/services/Coaching";
 
 function App() {
   return (
@@ -32,10 +33,11 @@ function App() {
             </>
           }
         />
-        <Route path="/investment" element={<InvestmentSavings/>} />
-        <Route path="/savings" element={<InsuranceProtection />} />
+        <Route path="/insurance" element={<InsuranceProtection />} />
+        <Route path="/savings" element={<InvestmentSavings />} />
         <Route path="/personalized" element={<PersonalizedServices />} />
         <Route path="/mortgage" element={<MortgageReferral />} />
+        <Route path="/coaching" element={<CoachingAndMentoring />} />
         <Route path="/tips" element={<FinancialGuideCard />} />
       </Routes>
     </Router>

@@ -34,14 +34,14 @@ const Consultation = () => {
     e.preventDefault();
 
     try {
-      const response = await emailjs.send(
+      await emailjs.send(
         "service_2l2guu8", 
         "template_mnj9zfa", 
         { ...formData } as Record<string, unknown>,
         "V9ztEx0bZRtF_njfP" // Public Key
       );
 
-      console.log("Email sent successfully:", response);
+      // console.log("Email sent successfully:", response);
       setFormData({
         fullName: "",
         email: "",
@@ -132,9 +132,14 @@ const Consultation = () => {
               onChange={handleChange}
             >
               <option>Primary Financial Concerns</option>
+              <option>Savings</option>
               <option>Investment</option>
               <option>Retirement Planning</option>
-              <option>Debt Management</option>
+              <option>Insurance and Protection</option>
+              <option>Mortgage Referral</option>
+              <option>Personalised Financial Services</option>
+              <option>Coaching and Mentoring</option>
+              <option>Others</option>
             </select>
             <textarea
               name="details"
