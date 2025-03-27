@@ -80,7 +80,7 @@ const Consultation = () => {
             <Mail className="text-blue-700" />
             <div>
               <p className="font-bold">Email</p>
-              <p>eziyi.financial@gmail.com</p>
+              <p>victor@eziyifinancial.com</p>
             </div>
           </div>
           <div className="flex items-center space-x-3">
