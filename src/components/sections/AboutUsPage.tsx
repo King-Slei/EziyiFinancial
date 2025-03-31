@@ -42,7 +42,7 @@ const AboutUsPage = () => {
             He specializes in helping individuals and businesses navigate their financial journey with confidence.
           </p>
           <p className="text-gray-700 mt-2 text-sm md:text-base leading-relaxed">
-            With partnerships with over 20 financial institutions, Victor ensures clients receive the best options and tailored solutions.
+            In partnerships with various financial institutions, Victor ensures clients receive the best options and tailored solutions.
           </p>
           <a 
             href="https://calendly.com/eziyifinancial" 
