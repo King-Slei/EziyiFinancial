@@ -1,7 +1,7 @@
 import React from "react";
 import instagram from "../../assets/instagram.png";
 import facebook from "../../assets/facebook.png";
-import linkedin from "../../assets/linkedin.png";
+// import linkedin from "../../assets/linkedin.png";
 import background from "../../assets/background.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
