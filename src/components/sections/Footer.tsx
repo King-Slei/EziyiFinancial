@@ -76,15 +76,15 @@ const Footer: React.FC<FooterProps> = ({ isHomePage = false }) => {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="#" className="bg-white p-2 rounded-md shadow-md">
+            <Link to="https://www.instagram.com/eziyi_financial/" className="bg-white p-2 rounded-md shadow-md">
               <img src={instagram} alt="Instagram" className="w-6 h-6" />
-            </a>
-            <a href="#" className="bg-white p-2 rounded-md shadow-md">
+            </Link>
+            <Link to="https://www.facebook.com/profile.php?id=61566523444789" className="bg-white p-2 rounded-md shadow-md">
               <img src={facebook} alt="Facebook" className="w-6 h-6" />
-            </a>
-            <a href="#" className="bg-white p-2 rounded-md shadow-md">
+            </Link>
+            {/* <Link to="https://www.instagram.com/eziyi_financial/" className="bg-white p-2 rounded-md shadow-md">
               <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
-            </a>
+            </Link> */}
           </div>
         </div>
       </footer>
