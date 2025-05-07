@@ -1,4 +1,4 @@
-import profilePic from "../../assets/victor.png";
+import profilePic from "../../assets/new_victor.jpg";
 import { motion } from "framer-motion";
 import DifferentFromOthers from "./DifferentFromOthers";
 import PageHeaderModel from "../../components/models/PageHeaderModel";
