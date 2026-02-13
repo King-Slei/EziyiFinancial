@@ -205,17 +205,17 @@ We may update these Terms at any time. Continued use of our services after chang
             onClick={closePopup}
           >
             <div
-              className="bg-white text-black max-w-3xl w-full p-6 rounded-lg overflow-y-auto max-h-[80vh]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={closePopup}
-                className="float-right text-red-500 font-bold text-lg"
-              >
-                ×
-              </button>
-              <pre className="whitespace-pre-wrap">{popupContent}</pre>
-            </div>
+  className="bg-white text-black max-w-3xl w-full p-6 rounded-lg overflow-y-auto max-h-[80vh] self-start mt-4"
+  onClick={(e) => e.stopPropagation()}
+>
+  <button
+    onClick={closePopup}
+    className="float-right text-red-500 font-bold text-lg"
+  >
+    ×
+  </button>
+  <pre className="whitespace-pre-wrap">{popupContent}</pre>
+</div>
           </div>
         )}
       </footer>
